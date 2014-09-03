@@ -80,6 +80,14 @@ public class Personaje {
         pj[3]=LUK;
         pj[4]=HPp;
         pj[5]=MPp;
+        pj[6]=ARM;
+        pj[7]=MGR;
+        pj[8]=ATK;
+        pj[9]=DMG;
+        pj[10]=rDMG;
+        pj[11]=HP;
+        pj[12]=MP;
+        pj[13]=main;
         return pj;
     }
     
