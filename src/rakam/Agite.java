@@ -11,30 +11,14 @@ package rakam;
  * @author Dario
  */
 
-import java.awt.*;
-import java.awt.event.*;
 
 public class Agite { 
-        public static void main(String[] args) {
-        // TODO code application logic here
-        public class turnos() {
-            public turnos() {
-            int turno = 0;
-            turno = turno ++;
-            }
-
-            return turno;
-        }    
-
-    public class clock {
-        public click{
-        javax.swing.Timer t = new javax.swing.Timer(1000, new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                p.repaint();
-            }
-       }
-                });
-    }
-    }
     
+    //TURNOS Y RELOJ
+    public static int Agite() {
+        int turno = 0;
+        turno = turno ++;
+        
+        return turno;
+    } 
 }
