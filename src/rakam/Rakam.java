@@ -18,8 +18,8 @@ public class Rakam  {
         Agite fight = new Agite();
         
         //CREAR PERSONAJES
-        Personaje personaje1 = new Personaje();
-        System.out.println(personaje1);
+        Personaje p1 = new Personaje();
+        System.out.println(p1);
     }
     
 }
