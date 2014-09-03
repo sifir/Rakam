@@ -3,20 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package rakam;
-
 /**
  *
  * @author Dario
  */
-public class Rakam {
+public class Rakam  {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Agite fight = new Agite();
+        
+        //CREAR PERSONAJES
+        Personaje personaje1 = new Personaje();
+        System.out.println(personaje1);
     }
     
 }
