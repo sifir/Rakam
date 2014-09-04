@@ -12,19 +12,19 @@ package rakam;
  */
 public class Pj {
         //DECLARACION ======D
-        float LUK;
-        float maxHP;
-        float maxMP; 
-        float ARM;
-        float MGR;
-        float ATK;
-        float DMG;
-        float HP;
-        float MP;
-        float STR;
-        float AGI;
-        float INT;
-        float main;
+        private float LUK;
+        private float maxHP;
+        private float maxMP; 
+        private float ARM;
+        private float MGR;
+        private float ATK;
+        private float DMG;
+        private float HP;
+        private float MP;
+        private float STR;
+        private float AGI;
+        private float INT;
+        private float main;
     public Pj(float STR, float AGI, float INT, float main) {
               
         //CREACION DEL PERSONAJE ======D
@@ -48,32 +48,12 @@ public class Pj {
             DMG = INT;
         }
     }
-        
-    public float[] getPj() {
-            float[] pj;
-            
-            pj = new float[13];
-            pj[0]=STR;
-            pj[1]=AGI;
-            pj[2]=INT;
-            pj[3]=LUK;
-            pj[4]=maxHP;
-            pj[5]=maxMP;
-            pj[6]=ARM;
-            pj[7]=MGR;
-            pj[8]=ATK;
-            pj[9]=DMG;
-            pj[11]=HP;
-            pj[12]=MP;
-            pj[13]=main;
-            return pj;
-        }
 
         //COMER DAÑO
         public float HPremove (float dmg, float hp) {
-            HP = HP - dmg;
+            HP = getHP() - dmg;
 
-            return HP;
+            return getHP();
         }
 
 //        //ATACAR
@@ -82,4 +62,95 @@ public class Pj {
 //
 //            return dmg;
 //        }
+
+    /**
+     * @return the LUK
+     */
+    public float getLUK() {
+        return LUK;
+    }
+
+    /**
+     * @return the maxHP
+     */
+    public float getMaxHP() {
+        return maxHP;
+    }
+
+    /**
+     * @return the maxMP
+     */
+    public float getMaxMP() {
+        return maxMP;
+    }
+
+    /**
+     * @return the ARM
+     */
+    public float getARM() {
+        return ARM;
+    }
+
+    /**
+     * @return the MGR
+     */
+    public float getMGR() {
+        return MGR;
+    }
+
+    /**
+     * @return the ATK
+     */
+    public float getATK() {
+        return ATK;
+    }
+
+    /**
+     * @return the DMG
+     */
+    public float getDMG() {
+        return DMG;
+    }
+
+    /**
+     * @return the HP
+     */
+    public float getHP() {
+        return HP;
+    }
+
+    /**
+     * @return the MP
+     */
+    public float getMP() {
+        return MP;
+    }
+
+    /**
+     * @return the STR
+     */
+    public float getSTR() {
+        return STR;
+    }
+
+    /**
+     * @return the AGI
+     */
+    public float getAGI() {
+        return AGI;
+    }
+
+    /**
+     * @return the INT
+     */
+    public float getINT() {
+        return INT;
+    }
+
+    /**
+     * @return the main
+     */
+    public float getMain() {
+        return main;
+    }
     }
