@@ -11,76 +11,82 @@ package rakam;
  * @author Dario
  */
 public class Pj {
-        //DECLARACION ======D
-        private float LUK;
-        private float maxHP;
-        private float maxMP; 
-        private float ARM;
-        private float MGR;
-        private float ATK;
-        private float DMG;
-        private float HP;
-        private float MP;
-        private float STR;
-        private float AGI;
-        private float INT;
-        private float main;
-    public Pj(float STR, float AGI, float INT, float main) {
-              
-        //CREACION DEL PERSONAJE ======D
-        //maxHP
-        HP = STR * 19;    
-        //maxMP 
-        maxMP = INT * 13;    
-        //ARM  
-        ARM = AGI * (float) 0.14;    
-        //ATK    
-        ATK = AGI;    
-        //MP    
-            MP = maxMP;    
-        //DMG
-        if (main == 1) {
-            DMG = STR;
-        }
-        if (main == 2) {
-            DMG = AGI;
-        } else {
-            DMG = INT;
-        }
+    
+    //DECLARACION ======D
+    final private int STR;
+    private int AGI;
+    private int INT;
+    private int LUK;
+    private int maxHP;
+    final private int maxMP; 
+    private int MGR;
+    final private int ATK;
+    private int DMG;
+    private int HP;
+    final private int MP;
+    final private float ARM;
+    private int main;
+
+public Pj(int fuerza, int agilidad, int inteligencia, int principal) {
+
+    //CREACION DEL PERSONAJE ======D
+
+    this.STR = fuerza;
+    //maxHP
+    this.HP = agilidad * 19;    
+    //maxMP 
+    this.maxMP = inteligencia * 13;    
+    //ARM  
+    this.ARM = AGI * (int) 0.14;    
+    //ATK    
+    this.ATK = AGI;    
+    //MP    
+    this.MP = maxMP;    
+    //DMG
+    if (principal == 1) {
+        this.DMG = STR + DMG;
+        this.main = 1;
+    }
+    if (principal == 2) {
+        this.DMG = AGI + DMG;
+        this.main = 2;
+    } else {
+        this.DMG = INT + DMG;
+        this.main = 3;
+    }
+}
+
+    //COMER DAÑO
+    public int HPremove (int dmg, int hp) {
+        HP = getHP() - dmg;
+
+        return getHP();
     }
 
-        //COMER DAÑO
-        public float HPremove (float dmg, float hp) {
-            HP = getHP() - dmg;
-
-            return getHP();
-        }
-
-//        //ATACAR
-//        public float ataque (float dmg) {
-//            float dmg = DMG;
-//
-//            return dmg;
-//        }
+    //ATACAR
+    public double ataque () {
+    double random = (Math.random()*10) + DMG;
+        return random;
+    }
 
     /**
      * @return the LUK
      */
-    public float getLUK() {
+    public int getLUK() {
         return LUK;
     }
 
     /**
      * @return the maxHP
      */
-    public float getMaxHP() {
+    public int getMaxHP() {
         return maxHP;
     }
 
     /**
      * @return the maxMP
      */
-    public float getMaxMP() {
+    public int getMaxMP() {
         return maxMP;
     }
 
@@ -94,63 +100,63 @@ public class Pj {
     /**
      * @return the MGR
      */
-    public float getMGR() {
+    public int getMGR() {
         return MGR;
     }
 
     /**
      * @return the ATK
      */
-    public float getATK() {
+    public int getATK() {
         return ATK;
     }
 
     /**
      * @return the DMG
      */
-    public float getDMG() {
+    public int getDMG() {
         return DMG;
     }
 
     /**
      * @return the HP
      */
-    public float getHP() {
+    public int getHP() {
         return HP;
     }
 
     /**
      * @return the MP
      */
-    public float getMP() {
+    public int getMP() {
         return MP;
     }
 
     /**
      * @return the STR
      */
-    public float getSTR() {
+    public int getSTR() {
         return STR;
     }
 
     /**
      * @return the AGI
      */
-    public float getAGI() {
+    public int getAGI() {
         return AGI;
     }
 
     /**
      * @return the INT
      */
-    public float getINT() {
+    public int getINT() {
         return INT;
     }
 
     /**
      * @return the main
      */
-    public float getMain() {
+    public int getMain() {
         return main;
     }
     }
